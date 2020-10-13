@@ -47,18 +47,19 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
         field1 = pb2.Field()
         field1.display_name = "Please Work"
         field1.key = "full_name"
-        field1.type = "anything"
+        field1.type = "text"
         field1.description = "This is a test server code"
 
         output = pb2.Field()
         output.display_name = "This will return a name eventually"
         output.key = "full_name"
-        output.type = "anything"
+        output.type = "text"
         output.description = "This is the output for the test server code"
 
         action1 = pb2.Action()
         action1.display_name = "Chris's Action"
         action1.description = "Chris Ackerman's first action"
+        # need to perform an action here, maybe make an API call. Would need the new workspace ID though
         #person.id.extend([1, 32, 43432])
         action1.inputs.extend([field1])
         action1.outputs.extend([output])
