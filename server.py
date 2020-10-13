@@ -55,7 +55,7 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
         output.description = "This is the custom field value for Workflow Text 1"
 
         action1 = pb2.Action()
-        action1.display_name = "Chris's Action"
+        action1.display_name = "New Project"
         action1.description = "Chris Ackerman's first action"
         # need to perform an action here, maybe make an API call. Would need the new workspace ID though
         action1.inputs.extend([field1])
