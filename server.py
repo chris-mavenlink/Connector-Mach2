@@ -47,13 +47,13 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
         print('New Workspace from Mavenlink: ', request.whatever)
         field1 = pb2.Field()
         field1.display_name = "Input Project CF"
-        field1.key = "workspace_id"
+        field1.key = "id"
         field1.type = "text"
         field1.description = "This is the internal ID of the source project"
 
         output = pb2.Field()
         output.display_name = "New Project CF Value"
-        output.key = "new_project_cf_value"
+        output.key = "title"
         output.type = "text"
         output.description = "This is the custom field value for Workflow Text 1"
 
