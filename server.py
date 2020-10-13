@@ -10,9 +10,6 @@ import connector_pb2_grpc
 
 class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
 
-    def __init__(self):
-        self.earth_message_history = []
-
     def triggers(self, request, context):
 
     	return pb2.TriggersResponse()
@@ -44,7 +41,7 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
         return response
 
         """
-        print('New Workspace from Mavenlink: ', request.whatever)
+        #print('New Workspace from Mavenlink: ', request.whatever)
         field1 = pb2.Field()
         field1.display_name = "Input Project CF"
         field1.key = "id"
