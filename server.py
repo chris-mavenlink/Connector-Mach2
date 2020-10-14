@@ -8,7 +8,7 @@ import connector_pb2 as pb2
 import connector_pb2_grpc
 
 
-class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
+class ConnectorServer(connector_pb2_grpc.ConnectorServicer):
 
     def triggers(self, request, context):
 
@@ -79,7 +79,7 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     connector_pb2_grpc.add_ConnectorServicer_to_server(
-        InterstellarServer(), server)
+        ConnectorServer(), server)
     server.add_insecure_port('[::]:50051')
     server.start()
     print('server started at port 50051')
