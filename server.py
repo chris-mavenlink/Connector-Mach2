@@ -17,7 +17,7 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
 
     def perform_trigger(self, request, context):
         #do something
-        return pbr.TriggerResponse()
+        return pb2.TriggerResponse()
 
     def actions(self, request, context):
         #request means the source object
@@ -73,7 +73,7 @@ class InterstellarServer(connector_pb2_grpc.ConnectorServicer):
     
     def perform_action(self, request, context):
         #do something
-        return pbr.ActionResponse()
+        return pb2.ActionResponse()
 
 
 def serve():
